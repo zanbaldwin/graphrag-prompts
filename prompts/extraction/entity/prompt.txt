@@ -29,16 +29,16 @@ Constraints:
         <output>
             {
                 "entities": [
-                    {"type":"GEO","name":"FIRUZABAD","description":"Firuzabad held Aurelians as hostages"},
-                    {"type":"GEO","name":"AURELIA","description":"Country seeking to release hostages"},
-                    {"type":"GEO","name":"QUINTARA","description":"Country that negotiated a swap of money in exchange for hostages"},
-                    {"type":"GEO","name":"TIRUZIA","description":"Capital of Firuzabad where the Aurelians were being held"},
-                    {"type":"GEO","name":"KROHAARA","description":"Capital city in Quintara"},
-                    {"type":"GEO","name":"CASHION","description":"Capital city in Aurelia"},
-                    {"type":"PERSON","name":"SAMUEL NAMARA","description":"Aurelian who spent time in Tiruzia's Alhamia Prison"},
-                    {"type":"GEO","name":"ALHAMIA PRISON","description":"Prison in Tiruzia"},
-                    {"type":"PERSON","name":"DURKE BATAGLANI","description":"Aurelian journalist who was held hostage"},
-                    {"type":"PERSON","name":"MEGGIE TAZBAH","description":"Bratinas national and environmentalist who was held hostage"}
+                    {"type":"Geo","name":"Firuzabad","description":"Firuzabad held Aurelians as hostages"},
+                    {"type":"Geo","name":"Aurelia","description":"Country seeking to release hostages"},
+                    {"type":"Geo","name":"Quintara","description":"Country that negotiated a swap of money in exchange for hostages"},
+                    {"type":"Geo","name":"Tiruzia","description":"Capital of Firuzabad where the Aurelians were being held"},
+                    {"type":"Geo","name":"Krohaara","description":"Capital city in Quintara"},
+                    {"type":"Geo","name":"Cashion","description":"Capital city in Aurelia"},
+                    {"type":"Person","name":"Samuel Namara","description":"Aurelian who spent time in Tiruzia's Alhamia Prison"},
+                    {"type":"Geo","name":"Alhamia Prison","description":"Prison in Tiruzia"},
+                    {"type":"Person","name":"Durke Bataglani","description":"Aurelian journalist who was held hostage"},
+                    {"type":"Person","name":"Meggie Tazbah","description":"Bratinas national and environmentalist who was held hostage"}
                 ]
             }
         </output>
@@ -50,9 +50,9 @@ Constraints:
         <output>
             {
                 "entities": [
-                    {"type":"ORGANIZATION","name":"CENTRAL INSTITUTION","description":"The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday"},
-                    {"type":"PERSON","name":"MARTIN SMITH","description":"Martin Smith is the chair of the Central Institution"},
-                    {"type":"ORGANIZATION","name":"MARKET STRATEGY COMMITTEE","description":"The Central Institution committee makes key decisions about interest rates and the growth of Verdantis's money supply"}
+                    {"type":"Organization","name":"Central Institution","description":"The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday"},
+                    {"type":"Person","name":"Martin Smith","description":"Martin Smith is the chair of the Central Institution"},
+                    {"type":"Organization","name":"Market Strategy Committee","description":"The Central Institution committee makes key decisions about interest rates and the growth of Verdantis's money supply"}
                 ]
             }
         </output>
