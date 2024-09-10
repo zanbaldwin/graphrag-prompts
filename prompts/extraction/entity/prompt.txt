@@ -1,0 +1,65 @@
+Extract entities from the user-provided text, and identify their types (Person, Organization, Location, Date, Time, Event, or Other). Provide the extracted entities in the format "Entity Type: Entity Name" and explain why you chose each entity type.
+
+Please provide your response in the format below:
+
+
+{
+    "entities": [
+        {"type":"<entity-type>","name":"<entity-name>","description":"<entity-description>"},
+        {"type":"<entity-type>","name":"<entity-name>","description":"<entity-description>"},
+        {"type":"<entity-type>","name":"<entity-name>","description":"<entity-description>"}
+    ]
+}
+
+Constraints:
+- Only extract entities that are explicitly mentioned in the text.
+- Do not infer or assume information that is not present in the text.
+- Use common sense and general knowledge to inform your entity type choices.
+- The output MUST be in JSON format.
+
+<examples>
+    <example id="1">
+        <input>
+            Five Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.
+            The swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.
+            The exchange initiated in Firuzabad's capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.
+            They were welcomed by senior Aurelian officials and are now on their way to Aurelia's capital, Cashion.
+            The Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia's Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.
+        </input>
+        <output>
+            {
+                "entities": [
+                    {"type":"GEO","name":"FIRUZABAD","description":"Firuzabad held Aurelians as hostages"},
+                    {"type":"GEO","name":"AURELIA","description":"Country seeking to release hostages"},
+                    {"type":"GEO","name":"QUINTARA","description":"Country that negotiated a swap of money in exchange for hostages"},
+                    {"type":"GEO","name":"TIRUZIA","description":"Capital of Firuzabad where the Aurelians were being held"},
+                    {"type":"GEO","name":"KROHAARA","description":"Capital city in Quintara"},
+                    {"type":"GEO","name":"CASHION","description":"Capital city in Aurelia"},
+                    {"type":"PERSON","name":"SAMUEL NAMARA","description":"Aurelian who spent time in Tiruzia's Alhamia Prison"},
+                    {"type":"GEO","name":"ALHAMIA PRISON","description":"Prison in Tiruzia"},
+                    {"type":"PERSON","name":"DURKE BATAGLANI","description":"Aurelian journalist who was held hostage"},
+                    {"type":"PERSON","name":"MEGGIE TAZBAH","description":"Bratinas national and environmentalist who was held hostage"}
+                ]
+            }
+        </output>
+    </example>
+    <example id="2">
+        <input>
+            The Verdantis's Central Institution is scheduled to meet on Monday and Thursday, with the institution planning to release its latest policy decision on Thursday at 1:30 p.m. PDT, followed by a press conference where Central Institution Chair Martin Smith will take questions. Investors expect the Market Strategy Committee to hold its benchmark interest rate steady in a range of 3.5%-3.75%.
+        </input>
+        <output>
+            {
+                "entities": [
+                    {"type":"ORGANIZATION","name":"CENTRAL INSTITUTION","description":"The Central Institution is the Federal Reserve of Verdantis, which is setting interest rates on Monday and Thursday"},
+                    {"type":"PERSON","name":"MARTIN SMITH","description":"Martin Smith is the chair of the Central Institution"},
+                    {"type":"ORGANIZATION","name":"MARKET STRATEGY COMMITTEE","description":"The Central Institution committee makes key decisions about interest rates and the growth of Verdantis's money supply"}
+                ]
+            }
+        </output>
+    </example>
+</example>
+
+Note: If an entity can be classified under more than one type, please provide the most relevant type according to the context of the text.
+Please respond with the list of extracted entities and their corresponding types as JSON. Do not output anything more.
+
+Now that you have learned from the examples above, you may now perform entity extraction on the user input:

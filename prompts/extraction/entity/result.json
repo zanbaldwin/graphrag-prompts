@@ -1,0 +1,32 @@
+{
+    "entities": [
+        {"type":"GEO","name":"NETHERLANDS","description":"Country located in Northwestern Europe"},
+        {"type":"GEO","name":"HOLLAND","description":"Informal name for the Netherlands"},
+        {"type":"GEO","name":"NORTHWESTERN EUROPE","description":"Region where the Netherlands is located"},
+        {"type":"GEO","name":"CARIBBEAN","description":"Location of overseas territories of the Netherlands"},
+        {"type":"ORGANIZATION","name":"KINGDOM OF THE NETHERLANDS","description":"Kingdom that includes four constituent countries, including the Netherlands"},
+        {"type":"GEO","name":"GERMANY","description":"Country bordering the Netherlands to the east"},
+        {"type":"GEO","name":"BELGIUM","description":"Country bordering the Netherlands to the south"},
+        {"type":"GEO","name":"NORTH SEA","description":"Sea bordering the Netherlands to the north and west"},
+        {"type":"GEO","name":"UNITED KINGDOM","description":"Country sharing maritime borders with the Netherlands"},
+        {"type":"ORGANIZATION","name":"DUTCH EAST INDIA COMPANY","description":"Trading company established by the Netherlands during the Dutch Golden Age"},
+        {"type":"ORGANIZATION","name":"DUTCH WEST INDIA COMPANY","description":"Trading company established by the Netherlands during the Dutch Golden Age"},
+        {"type":"GEO","name":"AMSTERDAM","description":"Most populous city in the Netherlands and nominal capital"},
+        {"type":"GEO","name":"ROTTERDAM","description":"One of the four largest cities in the Netherlands"},
+        {"type":"GEO","name":"THE HAGUE","description":"City where primary national political institutions are located"},
+        {"type":"GEO","name":"UTRECHT","description":"One of the four largest cities in the Netherlands"},
+        {"type":"ORGANIZATION","name":"STATES GENERAL","description":"Institution with its seat in The Hague"},
+        {"type":"ORGANIZATION","name":"CABINET","description":"Institution with its seat in The Hague"},
+        {"type":"ORGANIZATION","name":"SUPREME COURT","description":"Highest court in the Netherlands, located in The Hague"},
+        {"type":"GEO","name":"PORT OF ROTTERDAM","description":"Busiest port in Europe"},
+        {"type":"GEO","name":"SCHIPOL","description":"Busiest airport in the Netherlands and fourth busiest in Europe"},
+        {"type":"ORGANIZATION","name":"EUROPEAN UNION","description":"International organization of which the Netherlands is a founding member"},
+        {"type":"ORGANIZATION","name":"EUROZONE","description":"Economic union of which the Netherlands is a member"},
+        {"type":"ORGANIZATION","name":"G10","description":"International organization of which the Netherlands is a member"},
+        {"type":"ORGANIZATION","name":"NATO","description":"Military alliance of which the Netherlands is a member"},
+        {"type":"ORGANIZATION","name":"OECD","description":"Economic organization of which the Netherlands is a member"},
+        {"type":"ORGANIZATION","name":"WTO","description":"International trade organization of which the Netherlands is a member"},
+        {"type":"GEO","name":"SCHENGEN AREA","description":"Region without border controls, including the Netherlands"},
+        {"type":"ORGANIZATION","name":"BENELUX UNION","description":"Economic union of Belgium, Luxembourg, and the Netherlands"}
+    ]
+}
