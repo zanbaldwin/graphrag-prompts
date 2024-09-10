@@ -1,0 +1,87 @@
+From the entities provided by the user, identify all pairs of entities that are *clearly related* to each other in the user-provided text and extract the relationship between them.
+
+For each relationship you should include:
+- Relationship strength: a integer score from 1 to 10 indicating the strength of the relationship between the pair of entities.
+- Relationship description: an explanation as to why you think the relationship exists and the how the pair of entities are related to each other.
+
+Please provide your response in the format below:
+
+{
+    "relationships": [
+        {"entities":{"first":"<first-entity>","second":"<second-entity>"},"description":"<relationship-description>","strength":<strength-score>},
+        {"entities":{"first":"<first-entity>","second":"<second-entity>"},"description":"<relationship-description>","strength":<strength-score>},
+        {"entities":{"first":"<first-entity>","second":"<second-entity>"},"description":"<relationship-description>","strength":<strength-score>}
+    ]
+}
+
+Constraints:
+- Only extract relationships that are mentioned in the text.
+- Do not infer or assume information that is not present in the text.
+- Use common sense and general knowledge to inform your relationship choices.
+- The output MUST be in JSON format.
+
+<examples>
+    <example id="1">
+        <input>
+            Entities:
+            - Firuzabad (Geo)
+            - Aurelia (Geo)
+            - Quintara (Geo)
+            - Tiruzia (Geo)
+            - Krohaara (Geo)
+            - Cashion (Geo)
+            - Samuel Namara (Person)
+            - Alhamia Prison (Geo)
+            - Durke Bataglani (Person)
+            - Meggie Tazbah (Person)
+
+            Text:
+            Five Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia.
+            The swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.
+            The exchange initiated in Firuzabad's capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.
+            They were welcomed by senior Aurelian officials and are now on their way to Aurelia's capital, Cashion.
+            The Aurelians include 39-year-old businessman Samuel Namara, who has been held in Tiruzia's Alhamia Prison, as well as journalist Durke Bataglani, 59, and environmentalist Meggie Tazbah, 53, who also holds Bratinas nationality.
+        </input>
+        <output>
+            {
+                "relationships": [
+                    {"entities":{"first":"Firuzabad","second":"Aurelia"},"description":"Firuzabad negotiated a hostage exchange with Aurelia","strength":2},
+                    {"entities":{"first":"Quintara","second":"Aurelia"},"description":"Quintara brokered the hostage exchange between Firuzabad and Aurelia","strength":2},
+                    {"entities":{"first":"Quintara","second":"Firuzabad"},"description":"Quintara brokered the hostage exchange between Firuzabad and Aurelia","strength":2},
+                    {"entities":{"first":"Samuel Namara","second":"Alhamia Prison"},"description":"Samuel Namara was a prisoner at Alhamia prison","strength":8},
+                    {"entities":{"first":"Samuel Namara","second":"Meggie Tazbah"},"description":"Samuel Namara and Meggie Tazbah were exchanged in the same hostage release","strength":2},
+                    {"entities":{"first":"Samuel Namara","second":"Durke Bataglani"},"description":"Samuel Namara and Durke Bataglani were exchanged in the same hostage release","strength":2},
+                    {"entities":{"first":"Meggie Tazbah","second":"Durke Bataglani"},"description":"Meggie Tazbah and Durke Bataglani were exchanged in the same hostage release","strength":2},
+                    {"entities":{"first":"Samuel Namara","second":"Firuzabad"},"description":"Samuel Namara was a hostage in Firuzabad","strength":2},
+                    {"entities":{"first":"Meggie Tazbah","second":"Firuzabad"},"description":"Meggie Tazbah was a hostage in Firuzabad","strength":2},
+                    {"entities":{"first":"Durke Bataglani","second":"Firuzabad"},"description":"Durke Bataglani was a hostage in Firuzabad","strength":2}
+                ]
+            }
+        </output>
+    </example>
+    <example id="2">
+        <input>
+            Entities:
+            - Chris Urmson (Person)
+            - Silicon Valley (Location)
+            - Silicon Valley Engineers (Group)
+            - East Coast People (Group)
+
+            Text:
+            Chris Urmson: Yeah, no, and it is, right? I think one of the things that people outside of Silicon Valley who haven’t been here don’t realize is that it’s not really. That, like, you know, people talk about Silicon Valley engineers being risk-takers. I think it’s actually the opposite. It’s the realization that if you go and try one of these things and you’re actually good at what you do, if it fails, it fails. You’ll have a job the next day at somewhere else, right? And you’ll have this wealth of experience that people will value. And I think that is something that it’s hard, you know, I’ll categorize this as you know east coast people but, you know, kind of more conventional business folks haven’t — don’t kind of have that sense of the opportunities that are around. And maybe we’ve just been here during a particularly
+        </input>
+        <output>
+            {
+                "relationships": [
+                    {"entities":{"first":"Chris Urmson","second":"Silicon Valley"},"description":"Chris Urmson discusses the culture and dynamics of Silicon Valley, emphasizing the local attitude towards risk and failure","strength":8},
+                    {"entities":{"first":"Silicon Valley Engineers","second":"Silicon Valley"},"description":"Silicon Valley Engineers are part of the Silicon Valley ecosystem, embodying the local culture of risk-taking and resilience","strength":9},
+                    {"entities":{"first":"East Coast People","second":"Silicon Valley"},"description":"East Coast People are contrasted with Silicon Valley individuals in terms of business culture and risk tolerance","strength":7}
+                ]
+            }
+        </output>
+    </example>
+</example>
+
+Please respond with the list of extracted relationships and their corresponding descriptions and strength scores as JSON. Do not output anything more.
+
+Now that you have learned from the examples above, you may now perform relationship extraction on the user input:

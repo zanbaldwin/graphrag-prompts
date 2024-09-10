@@ -1,0 +1,24 @@
+{
+    "relationships": [
+        {"entities":{"first":"Netherlands","second":"Holland"},"description":"The Netherlands is also informally known as Holland","strength":9},
+        {"entities":{"first":"Netherlands","second":"Northwestern Europe"},"description":"The Netherlands is located in Northwestern Europe","strength":8},
+        {"entities":{"first":"Netherlands","second":"Caribbean"},"description":"The Netherlands has overseas territories in the Caribbean","strength":7},
+        {"entities":{"first":"Netherlands","second":"Kingdom of the Netherlands"},"description":"The Netherlands is one of the four constituent countries of the Kingdom of the Netherlands","strength":9},
+        {"entities":{"first":"Netherlands","second":"Germany"},"description":"The Netherlands borders Germany to the east and shares maritime borders with it","strength":7},
+        {"entities":{"first":"Netherlands","second":"Belgium"},"description":"The Netherlands borders Belgium to the south and shares maritime borders with it","strength":7},
+        {"entities":{"first":"Netherlands","second":"United Kingdom"},"description":"The Netherlands shares maritime borders with the United Kingdom","strength":6},
+        {"entities":{"first":"Dutch East India Company","second":"Dutch West India Company"},"description":"Both companies were trading companies of the Netherlands during the Dutch Golden Age","strength":8},
+        {"entities":{"first":"Netherlands","second":"European Union"},"description":"The Netherlands is a founding member of the European Union","strength":9},
+        {"entities":{"first":"Netherlands","second":"Eurozone"},"description":"The Netherlands is a part of the Eurozone","strength":8},
+        {"entities":{"first":"Netherlands","second":"G10"},"description":"The Netherlands is a part of G10","strength":7},
+        {"entities":{"first":"Netherlands","second":"NATO"},"description":"The Netherlands is a part of NATO","strength":8},
+        {"entities":{"first":"Netherlands","second":"OECD"},"description":"The Netherlands is a part of OECD","strength":7},
+        {"entities":{"first":"Netherlands","second":"WTO"},"description":"The Netherlands is a part of WTO","strength":7},
+        {"entities":{"first":"Netherlands","second":"Schengen Area"},"description":"The Netherlands is a part of the Schengen Area","strength":8},
+        {"entities":{"first":"Netherlands","second":"Benelux Union"},"description":"The Netherlands is a part of the trilateral Benelux Union","strength":7},
+        {"entities":{"first":"Amsterdam","second":"Netherlands"},"description":"Amsterdam is the country's most populous city and the nominal capital of the Netherlands","strength":9},
+        {"entities":{"first":"Rotterdam","second":"Netherlands"},"description":"Rotterdam is one of the four largest cities in the Netherlands","strength":7},
+        {"entities":{"first":"The Hague","second":"Netherlands"},"description":"The Hague holds the seat of the States General, Cabinet, and Supreme Court of the Netherlands","strength":9},
+        {"entities":{"first":"Utrecht","second":"Netherlands"},"description":"Utrecht is one of the four largest cities in the Netherlands","strength":7}
+    ]
+}

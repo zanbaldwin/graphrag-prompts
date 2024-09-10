@@ -1,0 +1,36 @@
+Your task is to compare the two user-provided texts, and decide how well the second text completes the first text's context in a semantically meaningful way, or if they should split apart. You must return score between 0 and 1, where 0 means they don't belong together and should be split apart, and 1 means they definitely belong to the same semantic context. Only return the score as JSON and nothing else.
+
+Constraints:
+- Do not infer or assume information that is not present in the text.
+- Use common sense and general knowledge to inform your semantic continuity score.
+- The output MUST be in JSON format.
+
+<examples>
+    <example id="1">
+        <input>
+            Text 1:
+            Five Aurelians jailed for 8 years in Firuzabad and widely regarded as hostages are on their way home to Aurelia. The swap orchestrated by Quintara was finalized when $8bn of Firuzi funds were transferred to financial institutions in Krohaara, the capital of Quintara.
+
+            Text 2:
+            The exchange initiated in Firuzabad's capital, Tiruzia, led to the four men and one woman, who are also Firuzi nationals, boarding a chartered flight to Krohaara.
+        </input>
+        <output>
+            {"semantic-similarity":0.85}
+        </output>
+    </example>
+    <example id="2">
+        <input>
+            Text 1:
+            Their creation of the modern Olympic Games was inspired by the ancient Olympic Games, held in Olympia, Greece from the 8th century BC to the 4th century AD. Baron Pierre de Coubertin founded the International Olympic Committee (IOC) in 1894, leading to the first modern Games in Athens in 1896. The IOC is the governing body of the Olympic Movement, which encompasses all entities and individuals involved in the Olympic Games. The Olympic Charter defines their structure and authority.
+
+            Text 2:
+            Microsoft debuted Internet Explorer in 1995, leading to a browser war with Netscape. On the JavaScript front, Microsoft created its own interpreter called JScript. Microsoft first released JScript in 1996, alongside initial support for CSS and extensions to HTML. Each of these implementations was noticeably different from their counterparts in Netscape Navigator.
+        </input>
+        <output>
+            {"semantic-similarity":0.16}
+        </output>
+    </example>
+</example>
+
+Think about your answer, does is it a float and nothing else? If not, please correct that and only return the float value as JSON.
+Now that you have learned from the examples above, you may now perform a semantic continuity score on the user input:
